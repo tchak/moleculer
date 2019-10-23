@@ -39,4 +39,4 @@ class GreeterService extends Service {
 	}
 };
 
-module.exports = GreeterService;
+export default GreeterService;

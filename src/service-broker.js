@@ -532,6 +532,8 @@ class ServiceBroker {
 
 		try {
 			schema = require(fName);
+			if (schema.__esModule && schema.default)
+				schema = schema.default;
 		} catch (e) {
 			this.logger.error(`Failed to load service '${fName}'`, e);
 			throw e;
